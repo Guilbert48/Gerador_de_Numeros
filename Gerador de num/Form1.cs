@@ -24,7 +24,6 @@ namespace Gerador_de_num
                numeroGerado = random.Next(0, 9);
                 textBoxRes.Text += numeroGerado.ToString();
             }
-
         }
     }
 }
