@@ -109,6 +109,7 @@
             btnLimpar.TabIndex = 6;
             btnLimpar.Text = "Limpar";
             btnLimpar.UseVisualStyleBackColor = false;
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // Gerador
             // 

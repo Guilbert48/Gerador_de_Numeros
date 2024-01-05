@@ -14,16 +14,32 @@ namespace Gerador_de_num
 
         private void button1_Click(object sender, EventArgs e)
         {
+            textBoxRes.Text = "";
+
             int numeroGerado;
-
-            int qtdNum = int.Parse(textBoxQtd.Text);
-            Random random = new Random();
-
-            for(int i = 0; i < qtdNum; i++)
+            if (textBoxQtd.Text != "")
             {
-               numeroGerado = random.Next(0, 9);
-                textBoxRes.Text += numeroGerado.ToString();
+                int qtdNum = int.Parse(textBoxQtd.Text);
+                Random random = new Random();
+
+                for (int i = 0; i < qtdNum; i++)
+                {
+                    numeroGerado = random.Next(0, 9);
+                    textBoxRes.Text += numeroGerado.ToString();
+                }
             }
+            else
+            {
+                MessageBox.Show("Por favor digite um valor", "Erro");
+            }
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            textBoxRes.Text = "";
+            textBoxQtd.Text = "";
+            textBoxQtd.Focus();
         }
     }
 }
